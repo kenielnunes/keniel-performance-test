@@ -27,11 +27,13 @@ export function handleSummary(data) {
 }
 
 export default function () {
-  const baseUrl = 'https://test.k6.io/';
+  const baseUrl = 'https://api.themoviedb.org/3/movie/changes?page=1';
 
   const params = {
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      Authorization:
+        'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0ZDgyNWIzNzk1MmYyMTkwMWM4ZjlkOGZlZGE2MWNkYiIsIm5iZiI6MTczMjgyNDY1MS41ODExOTgsInN1YiI6IjYyYzA3OGI2Mjg3MjNjMDA1OTNhYzhmMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.izE9OWIfLUZmaA9v2UdZ_9gUBfqsOuMLeUCIVeE4bZ4'
     }
   };
 
